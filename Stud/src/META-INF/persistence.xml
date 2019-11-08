@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="Stud" transaction-type="RESOURCE_LOCAL">
+	
+	<provider>org.hibernate.ejb.HibernatePersistence</provider>
+	<class>com.cg.jpastart.pojo.Student</class>
+<properties>
+<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.driver.OracleDriver"/>
+
+<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
+<property name="javax.persistence.jdbc.user" value="tom"/>
+<property name="javax.persistence.jdbc.password" value="jerry"/>
+
+<property name="javax.persistence.schema-generation.database.action" value="create"/>
+<property name="eclipselink.logging.level" value="SEVERE"/>
+<property name="eclipselink.ddl-generation" value="create-or-extends-tables"/>
+</properties>
+	</persistence-unit>
+</persistence>
